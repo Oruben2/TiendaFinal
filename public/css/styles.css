@@ -98,6 +98,10 @@ Margen {
   .espacio1 {
     margin-top: 10px; 
   }
+
+ .derecha {
+    margin-left: 750px;
+ } 
  
 .colorT{
     background-color: #F6C3AF;
