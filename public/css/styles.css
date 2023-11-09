@@ -56,19 +56,24 @@ Margen {
 }
 /* Estilos para el mensaje emergente (popup) */
 #cookie-banner {
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 80%;
-    background-color: #f5f5ba;
-    color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a237e;
+    color: white;
     padding: 10px;
     text-align: center;
+    z-index: 1000;
+  }
+
+  .color{
+    color: white;
   }
   
   #accept-cookies {
     background-color: #5bc0de;
-    color: #fff;
+    color:white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
