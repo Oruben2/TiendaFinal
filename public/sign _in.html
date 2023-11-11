@@ -1,88 +1,91 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/login.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
 <body class="body">
     <div id="login-banner">
-      <a href="index.html">
-        <img class="logo2" src="https://i.imgur.com/olN69wL.jpeg" alt="Logo">
+        <a href="index.html">
+            <img class="logo2" src="https://i.imgur.com/olN69wL.jpeg" alt="Logo">
         </a>
-        <form class="row g-3">
-              <div class="mb-3">
+        <form class="row g-3" id="registerForm">
+            <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Tú nombre</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre y apellido">
-              </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Correo electronico</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electronico">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre y apellido" required>
             </div>
             <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+                <label for="inputEmail4" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico" required>
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña" required>
             </div>
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Ciudad</label>
                 <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
-              </div>
-              <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
                 <label for="inputState" class="form-label">Estado</label>
                 <select id="inputState" class="form-select">
-                  <option selected>Selecionar...</option>
-                  <option>Aguascalientes</option>
-                  <option>Baja California</option>
-                  <option>Baja California Sur</option>
-                  <option>Campeche</option>
-                  <option>Chiapas</option>
-                  <option>Chihuahua</option>
-                  <option>Coahuila</option>
-                  <option>Colima</option>
-                  <option>Ciudad de México</option>
-                  <option>Durango</option>
-                  <option>Guanajuato</option>
-                  <option>Guerrero</option>
-                  <option>Hidalgo</option>
-                  <option>Jalisco</option>
-                  <option>México</option>
-                  <option>Michoacán</option>
-                  <option>Morelos</option>
-                  <option>Nayarit</option>
-                  <option>Nuevo León</option>
-                  <option>Oaxaca</option>
-                  <option>Puebla</option>
-                  <option>Querétaro</option>
-                  <option>Quintana Roo</option>
-                  <option>San Luis Potosí</option>
-                  <option>Sinaloa</option>
-                  <option>Sonora</option>
-                  <option>Tabasco</option>
-                  <option>Tamaulipas</option>
-                  <option>Tlaxcala</option>
-                  <option>Veracruz</option>
-                  <option>Yucatán</option>
-                  <option>Zacatecas</option>
+                    <option selected>Selecionar...</option>
+                    <option>Aguascalientes</option>
+                    <option>Baja California</option>
+                    <option>Baja California Sur</option>
+                    <option>Campeche</option>
+                    <option>Chiapas</option>
+                    <option>Chihuahua</option>
+                    <option>Coahuila</option>
+                    <option>Colima</option>
+                    <option>Ciudad de México</option>
+                    <option>Durango</option>
+                    <option>Guanajuato</option>
+                    <option>Guerrero</option>
+                    <option>Hidalgo</option>
+                    <option>Jalisco</option>
+                    <option>México</option>
+                    <option>Michoacán</option>
+                    <option>Morelos</option>
+                    <option>Nayarit</option>
+                    <option>Nuevo León</option>
+                    <option>Oaxaca</option>
+                    <option>Puebla</option>
+                    <option>Querétaro</option>
+                    <option>Quintana Roo</option>
+                    <option>San Luis Potosí</option>
+                    <option>Sinaloa</option>
+                    <option>Sonora</option>
+                    <option>Tabasco</option>
+                    <option>Tamaulipas</option>
+                    <option>Tlaxcala</option>
+                    <option>Veracruz</option>
+                    <option>Yucatán</option>
+                    <option>Zacatecas</option>
                 </select>
-              </div>
-              <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
                 <label for="inputZip" class="form-label">C.P.</label>
                 <input type="text" class="form-control" id="inputZip">
-              </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Direccion</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Calle, Numero y Fraccionamiento">
             </div>
             <div class="col-12">
-              </div>
-              <div>
-                <p>¿Ya tienes cuenta? <a class="enlace" href="login.html">Inicia sesion aqui.</a></p>
-              </div>
-              <div class="col-12">
-                <a class="enlace"><button type="submit" class="btn btn-primary" href="login.html">Registrarse</button></a>
-              </div>
-          </form>
-
+                <label for="inputAddress" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Calle, Numero y Fraccionamiento" required>
+            </div>
+            <div class="col-12">
+            </div>
+            <div>
+                <p>¿Ya tienes cuenta? <a class="enlace" href="login.html">Inicia sesión aquí.</a></p>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary" onclick="register()">Registrarse</button>
+            </div>
+        </form>
     </div>
 
+    <script src="js/login.js"></script>
 </body>
-
-<script src="/public/js/scripts.js"></script>
+</html>

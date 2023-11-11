@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+</head>
+<body>
+    <h1>Perfil de Usuario</h1>
+
+    <script>
+        // Obtener parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const email = params.get('email');
+        const city = params.get('city');
+        const state = params.get('state');
+        const zip = params.get('zip');
+        const address = params.get('address');
+
+        // Mostrar datos en la página
+        document.body.innerHTML += `
+            <p>Nombre: ${name}</p>
+            <p>Email: ${email}</p>
+            <p>Ciudad: ${city}</p>
+            <p>Estado: ${state}</p>
+            <p>C.P.: ${zip}</p>
+            <p>Dirección: ${address}</p>
+        `;
+    </script>
+</body>
+</html>

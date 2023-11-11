@@ -81,8 +81,12 @@ Margen {
     cursor: pointer;
   }
   
+  
 .publ {
     background-color: #4fbba5;
+}
+.color1{
+    background-color: grey;
 }
 
 .centrar {
