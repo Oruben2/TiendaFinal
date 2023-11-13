@@ -11,16 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
         let zip = document.getElementById("inputZip").value;
         let address = document.getElementById("inputAddress").value;
 
-        // Aquí puedes realizar validaciones y luego almacenar los datos del usuario en tu base de datos (o en tu caso, en un JSON)
+        // Aquí puedes realizar validaciones y luego almacenar los datos del usuario
 
         // Por simplicidad, aquí solo mostramos un mensaje
         alert("Registro exitoso");
 
         // Redirigir a la página de perfil del usuario con los datos
-        window.location.href = "perfil.html?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&city=" + encodeURIComponent(city) + "&state=" + encodeURIComponent(state) + "&zip=" + encodeURIComponent(zip) + "&address=" + encodeURIComponent(address);
+        window.location.href = "login.html?";
     }
 
-    function login() {
+    window.register = register;
+
+    window.login = function() {
         // Obtener valores del formulario de inicio de sesión
         let email = document.getElementById("floatingInput").value;
         let password = document.getElementById("floatingPassword").value;
@@ -37,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert("Credenciales incorrectas");
         }
-    }
 
-    // Asegúrate de que la función register esté disponible en el ámbito global
-    window.register = register;
+        window.location.href = "perfil.html?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&city=" + encodeURIComponent(city) + "&state=" + encodeURIComponent(state) + "&zip=" + encodeURIComponent(zip) + "&address=" + encodeURIComponent(address);
+    };
 });
