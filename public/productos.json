@@ -1,0 +1,65 @@
+[
+    {
+      "nombre": "Enfriador de CPU con RGB",
+      "precio": 1569,
+      "descripcion_corta": "Marca: COOLER MASTER Producto de alta calidad RGB",
+      "descripcion_larga": "ML240L RGB V2 es una actualización total de la popular serie Lite. La bomba se ha mejorado con la nueva generación de 3ª generación. Diseño de doble cámara, mejorando la eficiencia general de refrigeración del enfriador de agua AIO"
+    },
+    {
+      "nombre": "Asus Enfriamiento líquido de CPU",
+      "precio": 3260,
+      "descripcion_corta": "Bomba asetek de 7ma generación Tres ventiladores",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "SE Enfriador de aire de CPU",
+      "precio": 649,
+      "descripcion_corta": "Tubos de calor de 6x6 mm, Material: aluminio",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "Noctua NH-D15S Disipador de CPU de Doble Torre",
+      "precio": 2600,
+      "descripcion_corta": "Diseño asimétrico y de un único ventilador para un rendimiento de doble torre con alta compatibilidad.",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "Intel Procesador Core i7",
+      "precio": 6000,
+      "descripcion_corta": "Un mejor rendimiento por vatio y la microarquitectura hace que sea eficiente en energía.",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "Intel BX8070110100F Core i3",
+      "precio": 1110,
+      "descripcion_corta": "Procesador Intel Core i3 de 10ª generación.",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "AMD 100-100000457BOX",
+      "precio": 1620,
+      "descripcion_corta": "Marca: AMD. 100-100000457BOX.",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "AMD Ryzen™ 7 7700X",
+      "precio": 2600,
+      "descripcion_corta": "Aumento máximo de 5.4 GHz,Soporte DDR5-5200",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "Gigabyte Tarjeta gráfica GeForce RTX 3060",
+      "precio": 1620,
+      "descripcion_corta": "Descripción corta del producto 2",
+      "descripcion_larga": "Descripción larga del producto 2"
+    },
+    {
+      "nombre": "Tarjeta gráfica Pulse AMD Radeon RX 6600",
+      "precio": 19.99,
+      "descripcion_corta": "Descripción corta del producto 2",
+      "descripcion_larga": "Descripción larga del producto 2"
+    }
+
+
+  ]
+  

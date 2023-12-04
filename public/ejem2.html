@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles del Producto</title>
+  <style>
+    /* Estilos para el contenedor de detalles */
+    #detallesProducto {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor para los detalles del producto -->
+  <div id="detallesProducto">
+    <h2>Detalles del Producto</h2>
+    <p><strong>Nombre:</strong> <span id="nombreProducto"></span></p>
+    <p><strong>Precio:</strong> $<span id="precioProducto"></span></p>
+    <p><strong>Descripción Corta:</strong> <span id="descripcionCortaProducto"></span></p>
+    <p><strong>Descripción Larga:</strong> <span id="descripcionLargaProducto"></span></p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Obtener elementos del DOM
+      var nombreProducto = document.getElementById("nombreProducto");
+      var precioProducto = document.getElementById("precioProducto");
+      var descripcionCortaProducto = document.getElementById("descripcionCortaProducto");
+      var descripcionLargaProducto = document.getElementById("descripcionLargaProducto");
+
+      // Función para mostrar detalles del producto
+      function mostrarProducto(producto) {
+        nombreProducto.textContent = producto.nombre;
+        precioProducto.textContent = producto.precio;
+        descripcionCortaProducto.textContent = producto.descripcion_corta;
+        descripcionLargaProducto.textContent = producto.descripcion_larga;
+      }
+
+      // Arreglo para almacenar los productos
+      var productos = [];
+
+      // Obtener los datos de productos del archivo JSON
+      fetch('productos.json')
+        .then(response => response.json())
+        .then(data => {
+          // Almacenar los productos en el arreglo
+          productos = data;
+
+          // Mostrar detalles del primer producto al cargar la página
+          mostrarProducto(productos[0]);
+        })
+        .catch(error => {
+          console.error('Error al obtener los datos:', error);
+        });
+    });
+  </script>
+</body>
+</html>

@@ -109,7 +109,7 @@ Margen {
  } 
  
  .derechaa {
-    margin-left: 900px;
+    margin-left: 925px;
  } 
 
  .derecha2 {
@@ -135,6 +135,11 @@ Margen {
 .margen {
     margin: 2%;
     text: justify 5px;;
+}
+
+.imagen{
+    width: 300px;
+    height: 350px;
 }
 
 /* Estilos de las estrellas */

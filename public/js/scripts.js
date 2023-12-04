@@ -40,7 +40,7 @@ botonAceptarCookies.addEventListener('click', () => {
     
     // Simulamos una respuesta del sistema
     var respuesta = '<p><strong>Tu:</strong> ' + userInput + '</p>' +
-                    '<p><strong>Sistema:</strong> Gracias por tu pregunta. Puedes encontrar respuestas en nuestra sección de Preguntas Frecuentes.</p>';
+                    '<p><strong>Sistema:</strong> Gracias por tu cometario.</p>';
     
     // Agregamos la respuesta al chat
     chatBox.innerHTML += respuesta;
