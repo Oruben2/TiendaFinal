@@ -98,7 +98,6 @@
                       </form>
                     <button class="btn btn-secondary">Lista de Deseos</button>
                     <div class="btn">
-                        <a href="#">Pagar con</a>
                         <div id="paypal-button-container"></div>  
                     </div>
                     </div> 
@@ -170,6 +169,7 @@
             return actions.order.create({
                 purchase_units: [{
                     amount: {
+                        currency_code: 'MXM',
                         value: '1569'
                     }
                 }]
