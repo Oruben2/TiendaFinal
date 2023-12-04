@@ -1,32 +1,113 @@
-<!DOCTYPE html>
-<html lang="es">
+-<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-</head>
-<body>
-    <h1>Perfil de Usuario</h1>
+    <title>Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/perfil.css">
+    
+    </head>
+    <body>     
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="https://i.imgur.com/olN69wL.jpeg" alt="Logo" width="85" height="30" class="d-inline-block align-text-top">
+        </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          </div>
+        </div>  
+      </nav>
 
-    <script>
-        // Obtener parámetros de la URL
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get('name');
-        const email = params.get('email');
-        const city = params.get('city');
-        const state = params.get('state');
-        const zip = params.get('zip');
-        const address = params.get('address');
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-3 my-lg-0 my-md-1">
+                <div id="sidebar" class="bg-purple">
+                    <div class="h4 text-white">Cuenta</div>
+                    <ul>
+                        <li >
+                            <a href="informacion-compra.html" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">Mi cuenta</div>
+                                    <div class="link-desc">Ver y gestionar pedidos y devoluciones</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-box-open pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">Mis Pedidos</div>
+                                    <div class="link-desc">Ver y gestionar pedidos y devoluciones</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-address-book pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">Agenda de direcciones</div>
+                                    <div class="link-desc">Ver y gestionar las direcciones</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="far fa-user pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">Mi perfil</div>
+                                    <div class="link-desc">Cambiar los datos del perfil y la contraseña</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none d-flex align-items-start">
+                                <div class="fas fa-headset pt-2 me-3"></div>
+                                <div class="d-flex flex-column">
+                                    <div class="link">Ayuda y soporte técnico</div>
+                                    <div class="link-desc">Póngase en contacto con nosotros para obtener ayuda y asistencia</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 my-lg-0 my-1 ">
+                <div id="main-content" class="bg-light border">
+                    <div class="d-flex flex-column">
+                        <img class="rounded-circle mt-5" width="100px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                        <div class="h5">Hola Ruben,</div>
+                        <div>Conectado como: oruben2@gmail.com</div>
+                       
+                    </div>
+                   
+                    <div class="d-flex my-4 flex-wrap">
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Nombre:</label>
+                            <label for="" class="lavels">Ruben Ortiz</label></div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Emai: </label>
+                                <label for="" class="lavels">oruben2@gmail.com</label>
+                            </div>
+                            <div class="col-md-12"><label class="labels">Contraseña: </label><label for="" class="lavels">1234</label</div>
+                            
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
 
-        // Mostrar datos en la página
-        document.body.innerHTML += `
-            <p>Nombre: ${name}</p>
-            <p>Email: ${email}</p>
-            <p>Ciudad: ${city}</p>
-            <p>Estado: ${state}</p>
-            <p>C.P.: ${zip}</p>
-            <p>Dirección: ${address}</p>
-        `;
-    </script>
+    </div>
+    
 </body>
 </html>

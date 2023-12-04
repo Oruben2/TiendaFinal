@@ -56,7 +56,7 @@ Margen {
     margin: auto;
     height: 100vh;
 }
-/* Estilos para el mensaje emergente (popup) */
+/* Estilos para el mensaje cookies */
 #cookie-banner {
     position: fixed;
     top: 50%;
@@ -69,6 +69,9 @@ Margen {
     z-index: 1000;
   }
 
+  .parrafo {
+	margin-bottom: 15px;
+}
   .color{
     color: white;
   }
@@ -102,7 +105,11 @@ Margen {
   }
 
  .derecha {
-    margin-left: 750px;
+    margin-left: 820px;
+ } 
+ 
+ .derechaa {
+    margin-left: 900px;
  } 
 
  .derecha2 {
@@ -112,6 +119,10 @@ Margen {
  .derecha3 {
     margin-left: 920px;
  }  
+
+ .izquierda {
+    margin-right: 80%;
+ }
 .colorT{
     background-color: #F6C3AF;
     margin-bottom: 20px;
@@ -120,3 +131,32 @@ Margen {
 .text {
     text-align: justify;
 }
+
+.margen {
+    margin: 2%;
+    text: justify 5px;;
+}
+
+/* Estilos de las estrellas */
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  .star {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+  }
+  
+  .star:hover,
+  .star:hover ~ .star {
+    color: #ffcc00;
+  }
+  
+
+
+
+  

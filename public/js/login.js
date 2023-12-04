@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Tu código existente aquí
 
     function register() {
         // Obtener valores del formulario de registro
@@ -11,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let zip = document.getElementById("inputZip").value;
         let address = document.getElementById("inputAddress").value;
 
-        // Aquí puedes realizar validaciones y luego almacenar los datos del usuario
-
-        // Por simplicidad, aquí solo mostramos un mensaje
         alert("Registro exitoso");
 
         // Redirigir a la página de perfil del usuario con los datos
@@ -22,24 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.register = register;
 
-    window.login = function() {
-        // Obtener valores del formulario de inicio de sesión
-        let email = document.getElementById("floatingInput").value;
+     function login() {
+
+        let email = document.getElementById("floatingInput").value; 
         let password = document.getElementById("floatingPassword").value;
-
-        // Obtener valores del formulario de registro (puedes almacenar estos valores en una base de datos o donde prefieras)
-        let registeredEmail = document.getElementById("inputEmail4").value;
-        let registeredPassword = document.getElementById("inputPassword4").value;
-
+    
         // Verificar credenciales
-        if (email === registeredEmail && password === registeredPassword) {
+        if (email === 'admin' && password === '1234') {
+            alert("Bienvenido al panel de administrador");
+            window.location.href = "admin.html"; // Cambié 'window.local.href' por 'window.location.href'
+        } else if (email === 'oruben2@gmail.com' && password === '1234') { // Cambié la estructura del 'if'
             alert("Inicio de sesión exitoso");
-            // Redirigir a la página de perfil del usuario con los datos
-            window.location.href = "perfil.html?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&city=" + encodeURIComponent(city) + "&state=" + encodeURIComponent(state) + "&zip=" + encodeURIComponent(zip) + "&address=" + encodeURIComponent(address);
+            window.location.href = "index-usuario.html"; // Cambié 'window.local.href' por 'window.location.href'
         } else {
             alert("Credenciales incorrectas");
         }
-
-        window.location.href = "perfil.html?name=" + encodeURIComponent(name) + "&email=" + encodeURIComponent(email) + "&city=" + encodeURIComponent(city) + "&state=" + encodeURIComponent(state) + "&zip=" + encodeURIComponent(zip) + "&address=" + encodeURIComponent(address);
     };
-});
+    
