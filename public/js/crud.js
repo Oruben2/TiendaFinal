@@ -81,7 +81,7 @@ fetch('productos.json')
 
   console.log("correct");
 
-  document.querySelector('eliminar').addEventListener('click', traer);
+  document.querySelector('#eliminar').addEventListener('click', traer);
   
   
   function traer() {
