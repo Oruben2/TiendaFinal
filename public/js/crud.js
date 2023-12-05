@@ -1,37 +1,3 @@
-const contenedorProductos = document.getElementById('productos');
-
-// Función para mostrar los productos en el HTML
-function mostrarProductos(productos) {
-  contenedorProductos.innerHTML = ''; // Limpiar el contenedor
-
-  productos.forEach(producto => {
-    // Crear elementos HTML para cada producto
-    const productoDiv = document.createElement('div');
-    productoDiv.innerHTML = `
-      <h2>${producto.nombre}</h2>
-      <p>Precio: $${producto.precio}</p>
-      <p>${producto.descripcion_corta}</p>
-      <p>${producto.descripcion_larga}</p>
-      <button onclick="editarProducto('${producto.nombre}')">Editar</button>
-      <button onclick="eliminarProducto('${producto.nombre}')">Eliminar</button>
-    `;
-
-    // Agregar el producto al contenedor
-    contenedorProductos.appendChild(productoDiv);
-  });
-}
-
-// Función para editar un producto (puedes implementarla según tu necesidad)
-function editarProducto(nombre) {
-  // Lógica para editar un producto
-  console.log(`Editar ${nombre}`);
-}
-
-// Función para eliminar un producto (puedes implementarla según tu necesidad)
-function eliminarProducto(nombre) {
-  // Lógica para eliminar un producto
-  console.log(`Eliminar ${nombre}`);
-}
 
 // Cargar los productos desde el archivo JSON
 fetch('productos.json')
@@ -72,7 +38,7 @@ fetch('productos.json')
               for (let item of datos) {
                   //console.log(item.precio);
                   
-                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-danger' onclick=''>Eliminar</a><br><br></a> <a href='#' class='btn btn-Success' onclick=''>Editar</a></td></tr>"
+                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-danger' onclick=''>Eliminar</a><br><br></a> <a href='#' class='btn btn-success' onclick=''>Editar</a></td></tr>"
                 }
    
           }
