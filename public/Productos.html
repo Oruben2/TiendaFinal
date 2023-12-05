@@ -120,6 +120,27 @@
         </div>
       </div>
     </div>
+    <script>
+      paypal.Buttons({
+         createOrder: function(data, actions) {
+             return actions.order.create({
+                 purchase_units: [{
+                     amount: {
+                         currency_code: 'MXN',
+                         value: '3260'
+                     }
+                 }]
+             });
+         },
+     
+             onApprove: function(data, actions) {
+                 return actions.order.capture().then(function(details) {
+                     alert('Pago completado. ¡Gracias por tu compra!');
+                     // Puedes agregar aquí lógica adicional después de completar el pago
+                 });
+             }
+         }).render('#paypal-button-container');
+     </script>    
 <!--Producto 3-->    
     <div class="col">
       <div class="card">
