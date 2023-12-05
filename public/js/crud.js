@@ -107,16 +107,13 @@ function traer() {
                 //console.log(item.precio);
 
                 res.innerHTML += `
-    
+    <tr>
         <td>${item.nombre}</td>
         <td>${item.precio}</td>
         <td>${item.descripcion_corta}</td>
         <td>${item.descripcion_larga}</td>
-        <td>
-            <a href='#' class='btn btn-primary' onclick=''>Eliminar</a><br><br>
-            <a href='#' class='btn btn-primary' onclick=''>Editar</a>
-        </td>
-    `;
+        
+    </tr>`;
 
                 if (item.id == 9) {
                     datos.splice(1, 1)
