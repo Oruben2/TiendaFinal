@@ -3,6 +3,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://www.paypal.com/sdk/js?client-id=AY0FmYPOCTuzhPqD9KHEJgX9sLVwgjXVEC_hy6c20KGHiFo51AepqEfXrcYI7Av-ETCPsBBRHNErGJp3&currency=MXN"></script>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
@@ -65,19 +66,42 @@
           <button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
           </svg></button>
-          <a href="Producto.html" class="btn btn-danger">Comprar</a> 
-          <button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <div class="btn">
+            <div id="paypal-button-container"></div>  
+        </div>
+          <button type="button" class="btn btn-primary btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
           </svg></button>
         </div>
       </div>
     </div>
+    <script>
+      paypal.Buttons({
+         createOrder: function(data, actions) {
+             return actions.order.create({
+                 purchase_units: [{
+                     amount: {
+                         currency_code: 'MXN',
+                         value: '1569'
+                     }
+                 }]
+             });
+         },
+     
+             onApprove: function(data, actions) {
+                 return actions.order.capture().then(function(details) {
+                     alert('Pago completado. ¡Gracias por tu compra!');
+                     // Puedes agregar aquí lógica adicional después de completar el pago
+                 });
+             }
+         }).render('#paypal-button-container');
+     </script>
 <!--Producto 2-->
     <div class="col">
       <div class="card">
         <img src="https://m.media-amazon.com/images/I/61EGIcUmxXL._SL1500_.jpg" class="card-img-top imagen" alt="Enfriador liquido 2">
         <div class="card-body">
-          <h5 class="card-title">Asus Enfriamiento líquido de CPU</h5>
+          <a href="producto2.html"><h5 class="card-title">Asus Enfriamiento líquido de CPU</h5></a>
           <p class="card-text">
             <ul> <b>Acerca este artículo</b>
               <li scope="col">Bomba asetek de 7ma generación</li>
@@ -85,7 +109,8 @@
             </p>
             <br><br>
           <h4 class="card-text">$3,260</h4>
-          <button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+          <button type="button" class="btn btn-secondary btn-lg
+          "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
           </svg></button>
           <a href="#" class="btn btn-danger">Comprar</a> 
@@ -278,11 +303,12 @@
       <h5 class="card-title">Tarjeta gráfica Pulse AMD Radeon RX 6600  </h5>
       <p class="card-text">
         <ul> <b>Acerca este artículo</b>
-          <li scope="col">Multiprocesadores NVIDIA Ampere Streaming</li>
-          <li scope="col">Núcleos RT de segunda generación</li>
+          <li scope="col">AMD Radeon RX 6600</li>
+          <li scope="col">DDR6 de 128 bits</li>
         </ul>
         </p>
-      <h4 class="card-text">$1,620</h4>
+        <br>
+      <h4 class="card-text">$4,099</h4>
       <button type="button" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
       </svg></button>
