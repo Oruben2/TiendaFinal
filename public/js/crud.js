@@ -72,7 +72,7 @@ fetch('productos.json')
               for (let item of datos) {
                   //console.log(item.precio);
                   
-                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-primary' onclick=''>Eliminar</a><br><br></a> <a href='#' class='btn btn-primary' onclick=''>Editar</a></td></tr>"
+                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-danger' onclick=''>Eliminar</a><br><br></a> <a href='#' class='btn btn-Success' onclick=''>Editar</a></td></tr>"
                 }
    
           }
