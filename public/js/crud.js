@@ -72,8 +72,7 @@ fetch('productos.json')
               for (let item of datos) {
                   //console.log(item.precio);
                   
-                  res.innerHTML += "<tr><td>"+item.id+"</td><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-primary' onclick=''>Eliminar</a><br><br></a></td></tr>"
-   
+                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-primary' onclick=''>Eliminar</a><br><br></a></td></tr>"
               }
    
           }
@@ -82,7 +81,7 @@ fetch('productos.json')
 
   console.log("correct");
 
-  document.querySelector('#eliminar').addEventListener('click', traer);
+  document.querySelector('eliminar').addEventListener('click', traer);
   
   
   function traer() {
@@ -107,7 +106,7 @@ fetch('productos.json')
               for (let item of datos) {
                   //console.log(item.precio);
                   
-                  res.innerHTML += "<tr><td>"+item.id+"</td><td>"+item.nombre+"</td><td>"+item.cantidad+"</td><td>"+item.descripción+"</td><td>"+item.precio+"</td><td><img src='"+item.imagen+"'></img></td><td>  <a href='#' class='btn btn-primary' onclick=''>Eliminar</a></td></tr>"
+                  res.innerHTML += "<tr><td>"+item.nombre+"</td><td>"+item.precio+"</td><td>"+item.descripcion_corta+"</td><td><td>"+item.descripcion_larga+"</td><td> <a href='#' class='btn btn-primary' onclick=''>Eliminar</a><br><br></a></td></tr>"
              
                 if(item.id==9){
                   datos.splice(1, 1)
