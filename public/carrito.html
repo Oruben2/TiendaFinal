@@ -1,0 +1,40 @@
+<div id="cart-items">
+    <!-- Aquí se mostrarán los elementos del carrito -->
+  </div>
+  
+  <button onclick="verCarrito()">Ver Carrito</button>
+  
+  <input type="image" onclick="agregarAlCarrito('Nombre del Producto', 'Precio')" src="https://www.paypalobjects.com/es_ES/i/btn/btn_cart_SM.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Añadir al carro" />
+
+  <button onclick="agregarAlCarritoPorId(1)">Agregar Producto 1 al Carrito</button>
+  <button onclick="agregarAlCarritoPorId(2)">Agregar Producto 2 al Carrito</button>
+  <!-- Agrega más botones para otros productos si es necesario -->
+  
+<script>
+ let carrito = [];
+
+// Esta función carga los productos desde el archivo JSON
+function cargarProductos() {
+  fetch('productos.json') // Cambia la ruta al archivo productos.json
+    .then(response => response.json())
+    .then(data => {
+      // Maneja los datos cargados, por ejemplo, los guarda en una variable global
+      productos = data;
+    })
+    .catch(error => console.error('Error cargando los productos:', error));
+}
+
+// Función para agregar productos al carrito basado en su ID
+function agregarAlCarritoPorId(id) {
+  // Busca el producto por su ID en la lista de productos
+  const productoEncontrado = productos.find(producto => producto.id === id);
+
+  if (productoEncontrado) {
+    carrito.push(productoEncontrado);
+    console.log(`Agregado al carrito: ${productoEncontrado.nombre}, ${productoEncontrado.precio}`);
+  } else {
+    console.log('Producto no encontrado');
+  }
+}
+
+</script>
