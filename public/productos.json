@@ -15,49 +15,49 @@
       "nombre": "SE Enfriador de aire de CPU",
       "precio": 649,
       "descripcion_corta": "Tubos de calor de 6x6 mm, Material: aluminio",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Thermalright es una marca de Taiwán con más de 20 años de desarrollo. Tiene cierta popularidad en los mercados nacionales y extranjeros y tiene una influencia fundamental en el mercado de jugadores. Nos hemos centrado en la investigación y el desarrollo de accesorios informáticos. El enfriador de CPU y el ventilador de la carcasa son los productos principales"
     },
     {
       "nombre": "Noctua NH-D15S Disipador de CPU de Doble Torre",
       "precio": 2600,
       "descripcion_corta": "Diseño asimétrico y de un único ventilador para un rendimiento de doble torre con alta compatibilidad.",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Ventilador NF-A15, reconocido y galardonado, de 140 mm con adaptador para disminución de ruido y PWM para un control automático de la velocidad: máxima refrigeración con carga, prácticamente en silencio cuando se encuentra en reposo."
     },
     {
       "nombre": "Intel Procesador Core i7",
       "precio": 6000,
       "descripcion_corta": "Un mejor rendimiento por vatio y la microarquitectura hace que sea eficiente en energía.",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Intel El procesador Core i7 de 3.60 GHz ofrece más espacio de caché y la arquitectura de hiperenhebrado ofrece un alto rendimiento para aplicaciones exigentes con mejores gráficos integrados y un impulso turbo más rápido"
     },
     {
-      "nombre": "Intel BX8070110100F Core i3",
+      "nombre": "Intel Core i3",
       "precio": 1110,
       "descripcion_corta": "Procesador Intel Core i3 de 10ª generación.",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Intel BX8070110100F Core i3-10100F Comet Lake Quad - Procesador de sobremesa, Core 3,6 GHz, 6 MB, LGA 1200, 65W, 4C / 8T"
     },
     {
       "nombre": "AMD 100-100000457BOX",
       "precio": 1620,
       "descripcion_corta": "Marca: AMD. 100-100000457BOX.",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Hoy, AMD ofrece la cartera de tecnologías de procesadores adaptables muy variada e importante del sector, ya que combina sus CPU, GPU, FPGA, SoC adaptables y enorme experiencia en software para diseñar plataformas informáticas para la nube, edge y dispositivos terminales."
     },
     {
       "nombre": "AMD Ryzen™ 7 7700X",
-      "precio": 2600,
+      "precio": 5999,
       "descripcion_corta": "Aumento máximo de 5.4 GHz,Soporte DDR5-5200",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "descripcion_larga": "Este procesador de juegos dominante puede ofrecer un rendimiento rápido de más de 100 FPS en los juegos más populares del mundo"
     },
     {
       "nombre": "Gigabyte Tarjeta gráfica GeForce RTX 3060",
-      "precio": 1620,
-      "descripcion_corta": "Descripción corta del producto 2",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "precio": 6669,
+      "descripcion_corta": "Multiprocesadores NVIDIA Ampere Streaming, Alimentado por GeForce RTX 3060",
+      "descripcion_larga": "Alimentado por GeForce RTX 3060RPA2023 Integrado con interfaz de memoria GDDR6 de 192 bits. WINDWINDFORCE 2X Refrigeración Sima con ventiladores giratorios altertivos. Refrigeración de visualización. Tañopacto de 200 mm. Reloj de núcleo: 1792 MHz"
     },
     {
       "nombre": "Tarjeta gráfica Pulse AMD Radeon RX 6600",
-      "precio": 4099,
-      "descripcion_corta": "Descripción corta del producto 2",
-      "descripcion_larga": "Descripción larga del producto 2"
+      "precio": 4379,
+      "descripcion_corta": "AMD Radeon RX 6600, DDR6 de 128 bits",
+      "descripcion_larga": "La tarjeta gráfica SAPPHIRE PULSE AMD Radeon RX 6600 XT funciona con la potente tecnología de refrigeración Dual-X junto con el control inteligente del ventilador para mantener las temperaturas bajas y el ruido del ventilador bajo. El diseño refinado de PCB ofrece un rendimiento estable, fiable y constante, lo que reduce de manera eficiente la temperatura de la PCB y el ruido de la señal de los componentes."
     }
 
 

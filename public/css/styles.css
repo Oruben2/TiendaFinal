@@ -142,6 +142,11 @@ Margen {
     height: 350px;
 }
 
+.imagen2{
+    width: 650px;
+    height: 500px;
+}
+
 /* Estilos de las estrellas */
 .rating {
     unicode-bidi: bidi-override;
