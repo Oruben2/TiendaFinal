@@ -1,19 +1,19 @@
 
-// Cargar los productos desde el archivo JSON
-fetch('productos.json')
-  .then(response => response.json())
-  .then(data => {
+function extraerDatos() {
+    fetch('productos.json')
+      .then(response => response.json())
+      .then(data => {
+        mostrarProductos(data);
+      })
+      .catch(error => {
+        console.error('Error al cargar los productos:', error);
+      });
   
-    mostrarProductos(data);
-  })
-  .catch(error => {
-    console.error('Error al cargar los productos:', error);
-  });
-
-
-  console.log("correct");
-
-  document.querySelector('#btnExtraer').addEventListener('click', traerDatos());
+    console.log("correct");
+  }
+  
+  // Llamar a la función directamente para extraer los datos al cargar la página
+  extraerDatos();
   
   
   function traerDatos() {
