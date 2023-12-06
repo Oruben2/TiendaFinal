@@ -88,7 +88,7 @@
                     </div>
                    
                     <div id="detallesUsuario">
-                        <h2>Dettes de perfil:</h2>
+                        <h2>Detalles de perfil:</h2>
                         <p><strong>Nombre:</strong> <span id="nombre"></span></p>
                         <p><strong>correo:</strong> <span id="correo"></span></p>
                         <p><strong>contraseña:</strong> <span id="contraseña"></span></p>
@@ -110,9 +110,9 @@
       // Función para mostrar detalles del producto
       function mostrarProducto(usuarios) {
         nombre.textContent = usuarios.nombre;
-        correo.textContent = usuarios.precio;
-        contraseña.textContent = usuarios.descripcion_corta;
-        ciudad.textContent = usuarios.descripcion_larga;
+        correo.textContent = usuarios.correo;
+        contraseña.textContent = usuarios.contraseña;
+        ciudad.textContent = usuarios.ciudad;
       }
 
       // Arreglo para almacenar los productos
