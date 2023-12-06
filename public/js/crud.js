@@ -31,7 +31,6 @@ function mostrarUsuarios() {
         const fila = document.createElement('tr');
         fila.innerHTML = `
           <td>${usuario.nombre}</td>
-          <td>${usuario.apellido}</td>
           <td>${usuario.correo}</td>
           <td>${usuario.contraseña}</td>
           <td>${usuario.ciudad}</td>

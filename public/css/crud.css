@@ -17,6 +17,7 @@
     background: #555;
 }
 
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 * {
@@ -31,6 +32,9 @@ body {
     padding: 10px
 }
 
+bot {
+    text-align: center;
+}
 .topnav {
     background-color: #ffff;
     overflow: hidden
