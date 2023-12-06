@@ -1,6 +1,10 @@
-// Función para cargar y mostrar los productos
-function mostrarProductos(data) {
-  const cuerpoTabla = document.getElementById('res'); 
+
+  function mostrarUsuarios() {
+    fetch('product.json')
+      .then(response => response.json())
+      .then(data => {
+        const cuerpoTabla = document.getElementById('res');
+  
 
   // Iterar sobre los datos y agregar filas a la tabla
   data.forEach(item => {
