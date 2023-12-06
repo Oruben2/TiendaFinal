@@ -58,3 +58,23 @@ fetch('productos.json')
   .catch(error => {
     console.error('Error al cargar los productos:', error);
   });
+
+// Eliminar producto al hacer clic en el botón "Eliminar"
+$("#item").on("click", ".btn-eliminar", function() {
+  var index = $(this).closest("tr").data("index");
+  data.splice(index, 1);
+  actualizarTabla();
+});
+
+// Inicializar la tabla
+actualizarTabla();
+
+// Eliminar producto al hacer clic en el botón "Eliminar"
+$("#usuario").on("click", ".btn-eliminar", function() {
+  var index = $(this).closest("tr").data("index");
+  data.splice(index, 1);
+  actualizarTabla();
+});
+
+// Inicializar la tabla
+actualizarTabla();
