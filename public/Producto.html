@@ -92,7 +92,7 @@
                     <!--Agregar al carrito-->
                     <button onclick="agregarAlCarrito">Enviar al carrito de compras</button>
                     <!--Agurefar a lista de deseos-->
-                    <button id="btnEnviarWishlist" class="btn btn-primary">Enviar a Wishlist</button>
+                    <button id="agregarWishlist" class="btn btn-primary">Agregar a Wishlist</button>
                     <!--Comprar ahora-->
                     <div class="btn">
                         <div id="paypal-button-container"></div>  
@@ -228,18 +228,14 @@
         });
     });
 
-    ///Funcion para agregar al carrito
-    function agregarAlCarrito(productoJSON) {
-  const producto = JSON.parse(productoJSON); // Convertir JSON a objeto JavaScript
-  const listaCarrito = document.getElementById('lista-carrito');
-  const nuevoItem = document.createElement('li');
-  nuevoItem.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
-  listaCarrito.appendChild(nuevoItem);
-}
+   // Función para redirigir a la página de wishlist al hacer clic en "Agregar a Wishlist"
+   document.getElementById('agregarWishlist').addEventListener('click', function() {
+      window.location.href = 'wishlist.html';
+    });
+
 </script>
 <script src="js/carrito.js"></script>
 <script src="js/wishlist.js"></script>
-<script src="productos.json"></script>
 <script src="js/producto.js"></script>
 
 </body>
