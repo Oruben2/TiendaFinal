@@ -11,8 +11,8 @@ function mostrarProductos(data) {
       <td>${item.descripcion_corta}</td>
       <td>${item.descripcion_larga}</td>
       <td>
-        <a href='#' class='btn btn-primary' onclick='eliminarProducto()'>Eliminar</a><br><br>
-        <a href='#' class='btn btn-primary' onclick='editarProducto()'>Editar</a>
+        <a href='#' class='btn btn-danger' onclick='eliminarProducto()'>Eliminar</a><br><br>
+        <a href='#' class='btn btn-succes' onclick='editarProducto()'>Editar</a>
       </td>
     `;
     cuerpoTabla.appendChild(fila);
