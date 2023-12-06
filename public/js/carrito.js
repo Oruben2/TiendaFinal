@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 // Carga de productos desde el archivo JSON
 fetch('productos.json')
 .then(response => response.json())
@@ -22,3 +23,4 @@ const nuevoItem = document.createElement('li');
 nuevoItem.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
 listaCarrito.appendChild(nuevoItem);
 }
+});
