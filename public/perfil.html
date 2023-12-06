@@ -87,27 +87,52 @@
                        
                     </div>
                    
-                    <div class="d-flex my-4 flex-wrap">
-                        <div class="row mt-2">
-                            <div class="col-md-6"><label class="labels">Nombre:</label>
-                            <label for="" class="lavels">Ruben Ortiz</label></div>
-                        </div>
-                        
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <label class="labels">Emai: </label>
-                                <label for="" class="lavels">oruben2@gmail.com</label>
-                            </div>
-                            <div class="col-md-12"><label class="labels">Contraseña: </label><label for="" class="lavels">1234</label</div>
-                            
-                        </div>
-                    
-                    
+                    <div id="detallesUsuario">
+                        <h2>Dettes de perfil:</h2>
+                        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+                        <p><strong>correo:</strong> $<span id="correo"></span></p>
+                        <p><strong>contraseña:</strong> <span id="contraseña"></span></p>
+                        <p><strong>Ciudad:</strong> <span id="ciudad"></span></p>
+                      </div>        
                 </div>
             </div>
         </div>
-
     </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Obtener elementos del DOM
+      var nombre = document.getElementById("nombre");
+      var correo = document.getElementById("correo");
+      var contraseña = document.getElementById("contraseña");
+      var ciudad = document.getElementById("ciudad");
+
+      // Función para mostrar detalles del producto
+      function mostrarProducto(usuarios) {
+        nombre.textContent = usuarios.nombre;
+        correo.textContent = usuarios.precio;
+        contraseña.textContent = usuarios.descripcion_corta;
+        ciudad.textContent = usuarios.descripcion_larga;
+      }
+
+      // Arreglo para almacenar los productos
+      var usuarios = [];
+
+      // Obtener los datos de productos del archivo JSON
+      fetch('usuarios.json')
+        .then(response => response.json())
+        .then(data => {
+          // Almacenar los productos en el arreglo
+          usuarios = data;
+
+          // Mostrar detalles del primer producto al cargar la página
+          mostrarProducto(usuarios[0]);
+        })
+        .catch(error => {
+          console.error('Error al obtener los datos:', error);
+        });
+    });
+</script>    
     
 </body>
 </html>
