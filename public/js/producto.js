@@ -29,3 +29,6 @@ function mostrarProductoEnWishlist() {
 // Llamamos a la función para mostrar el producto en la wishlist al cargar la página
 window.onload = mostrarProductoEnWishlist;
 
+// Llamamos a la función para mostrar el producto en la wishlist al cargar la página
+window.onload = mostrarProductoEnWishlist;
+
