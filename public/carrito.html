@@ -1,47 +1,72 @@
-<div id="cart-items">
-    <!-- Aquí se mostrarán los elementos del carrito -->
-  </div>
-  
-  <button onclick="verCarrito()">Ver Carrito</button>
-  
-  <input type="image" onclick="agregarAlCarrito('Nombre del Producto', 'Precio')" src="https://www.paypalobjects.com/es_ES/i/btn/btn_cart_SM.gif" border="0" name="submit" title="PayPal, la forma rápida y segura de pagar en Internet." alt="Añadir al carro" />
-
-  <button onclick="agregarAlCarritoPorId(1)">Agregar Producto 1 al Carrito</button>
-  <button onclick="agregarAlCarritoPorId(2)">Agregar Producto 2 al Carrito</button>
-  <!-- Agrega más botones para otros productos si es necesario -->
-  
-
-  <div class="btn-group" data-toggle="buttons">
-    <a href="/book-life/mayormenor" class="btn btn-primary">Mayor Precio</a>
-    <a href="/book-life/menormayor" class="btn btn-primary">Menor Precio</a>
-    <a href="/book-life/alfabetico" class="btn btn-primary">Alfabético</a>
-  </div>
-
-<script>
- let carrito = [];
-
-// Esta función carga los productos desde el archivo JSON
-function cargarProductos() {
-  fetch('productos.json') // Cambia la ruta al archivo productos.json
-    .then(response => response.json())
-    .then(data => {
-      // Maneja los datos cargados, por ejemplo, los guarda en una variable global
-      productos = data;
-    })
-    .catch(error => console.error('Error cargando los productos:', error));
-}
-
-// Función para agregar productos al carrito basado en su ID
-function agregarAlCarritoPorId(id) {
-  // Busca el producto por su ID en la lista de productos
-  const productoEncontrado = productos.find(producto => producto.id === id);
-
-  if (productoEncontrado) {
-    carrito.push(productoEncontrado);
-    console.log(`Agregado al carrito: ${productoEncontrado.nombre}, ${productoEncontrado.precio}`);
-  } else {
-    console.log('Producto no encontrado');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito
+  </title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <style>
+  .btn-paypal {
+    color: #003087;
+    background-color: yellow;
+    border-color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
   }
-}
+  .btn-paypal:hover {
+    background-color: yellow;
+    text-decoration: none;
+  }
+</style>
+<div class="container mt-5">
+  <a href="https://www.paypal.com/webapps/shoppingcart?mfid=1701838517107_f32764218e92f&flowlogging_id=f32764218e92f#/checkout/shoppingCart" class="btn btn-paypal">Ver carrito de compras</a>
+</div>
 
+<div id="productos">
+  <!-- Aquí se mostrarán los productos -->
+</div>
+
+<div id="carrito">
+  <h2>Carrito de Compras</h2>
+  <ul id="lista-carrito">
+    <!-- Aquí se mostrarán los productos agregados al carrito -->
+  </ul>
+</div>
+
+<!-- Bootstrap JS (opcional, necesario si se van a utilizar otras funciones de Bootstrap) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Carga de productos desde el archivo JSON
+  fetch('productos.json')
+    .then(response => response.json())
+    .then(productos => {
+      const productosDiv = document.getElementById('productos');
+      productos.forEach(producto => {
+        const productoDiv = document.createElement('div');
+        productoDiv.innerHTML = `
+          <h3>${producto.nombre}</h3>
+          <p>Precio: $${producto.precio}</p>
+          <p>${producto.descripcion_corta}</p>
+          <button onclick="agregarAlCarrito(${JSON.stringify(producto)})">Enviar al carrito de compras</button>
+        `;
+        productosDiv.appendChild(productoDiv);
+      });
+    });
+
+  // Función para agregar producto al carrito
+  function agregarAlCarrito(producto) {
+    const listaCarrito = document.getElementById('lista-carrito');
+    const nuevoItem = document.createElement('li');
+    nuevoItem.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
+    listaCarrito.appendChild(nuevoItem);
+  }
 </script>
+</body>
+</html>
