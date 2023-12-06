@@ -90,7 +90,7 @@
 
                 <div class="mb-3">
                     <!--Agregar al carrito-->
-                    <button onclick="agregarAlCarrito">Enviar al carrito de compras</button>
+                    <button id="agregarCarrito" class="btn btn-primary">Agregar al carrito</button>
                     <!--Agurefar a lista de deseos-->
                     <button id="agregarWishlist" class="btn btn-primary">Agregar a Wishlist</button>
                     <!--Comprar ahora-->
@@ -227,11 +227,7 @@
           console.error('Error al obtener los datos:', error);
         });
     });
-
-   // Función para redirigir a la página de wishlist al hacer clic en "Agregar a Wishlist"
-   document.getElementById('agregarWishlist').addEventListener('click', function() {
-      window.location.href = 'wishlist.html';
-    });
+   
 
 </script>
 <script src="js/carrito.js"></script>

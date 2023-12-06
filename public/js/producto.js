@@ -22,7 +22,10 @@ function mostrarProductoEnWishlist() {
 
   // Agregamos el producto al contenedor de la wishlist
   document.getElementById('wishlist').innerHTML = productoHTML;
+    // Agregamos el producto al contenedor de la wishlist
+    document.getElementById('carrito').innerHTML = productoHTML;
 }
 
 // Llamamos a la función para mostrar el producto en la wishlist al cargar la página
 window.onload = mostrarProductoEnWishlist;
+
