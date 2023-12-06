@@ -146,6 +146,38 @@ Margen {
     width: 500px;
     height: 450px;
 }
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: black;
+    text-transform: uppercase;
+  }
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #3498db;
+  }
+
+  /* Estilo cuando el selector está enfocado */
+  select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+
+  /* Estilo para las opciones */
+  option {
+    background-color: white;
+    color: black;
+  }
 
 /* Estilos de las estrellas */
 .rating {
