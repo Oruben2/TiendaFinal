@@ -13,11 +13,31 @@
     <div class="row mt-4">
         <div class="col-md-6">
           <h2>Wishlist</h2>
-          <ul id="wishlist" class="list-group">
-            <!-- Aquí se mostrarán los productos agregados a la Wishlist -->
-          </ul>
+          <div class="container mt-5">
+            <h2>${primerProducto.nombre}</h2>
+            <p><strong>Descripción:</strong> ${primerProducto.descripcion_corta}</p>
+            <p><strong>Precio:</strong> $${primerProducto.precio}</p>
+          </div>
         </div>
       </div>
     </div>
+    <script>
+      // JavaScript (wishlist.html)
+document.addEventListener("DOMContentLoaded", function() {
+  const params = new URLSearchParams(window.location.search);
+  const nombre = params.get('nombre');
+  const descripcion = params.get('descripcion');
+  const precio = params.get('precio');
+
+  // Mostrar la información del producto en la página wishlist.html
+  const wishlistInfo = document.getElementById('wishlistInfo');
+  wishlistInfo.innerHTML = `
+    <h2>${nombre}</h2>
+    <p><strong>Descripción:</strong> ${descripcion_corta}</p>
+    <p><strong>Precio:</strong> $${precio}</p>
+  `;
+});
+
+    </script>
     <script src="js/wishlist.js"></script>  
  </body>    
