@@ -83,31 +83,17 @@ function extraerDatos() {
   }
 
   ///CRUD USUARIOS
-   // Función para cargar y mostrar los datos del archivo JSON
-   function mostrarUsuarios() {
-    fetch('usuarios.json')
-      .then(response => response.json())
-      .then(data => {
-        const cuerpoTabla = document.getElementById('cuerpoTabla');
-        
-        // Iterar sobre los datos y agregar filas a la tabla
-        data.forEach(usuario => {
-          const fila = document.createElement('tr');
-          fila.innerHTML = `
-            <td>${usuario.nombre}</td>
-            <td>${usuario.apellido}</td>
-            <td>${usuario.correo}</td>
-            <td>${usuario.contraseña}</td>
-            <td>${usuario.ciudad}</td>
-          `;
-          cuerpoTabla.appendChild(fila);
-        });
-      })
-      .catch(error => {
-        console.error('Error al cargar los usuarios:', error);
-      });
+  function mostrarProductos(data) {
+    // ... lógica para mostrar los productos
   }
-
-  // Llamar a la función para mostrar los usuarios al cargar la página
-  mostrarUsuarios();
+  
+  // Código para cargar los productos
+  fetch('productos.json')
+    .then(response => response.json())
+    .then(data => {
+      mostrarProductos(data);
+    })
+    .catch(error => {
+      console.error('Error al cargar los productos:', error);
+    });
   
