@@ -203,7 +203,6 @@ stars.forEach(star => {
   star.addEventListener('click', () => {
     const starValue = parseInt(star.getAttribute('data-star'));
 
-    // Resaltar las estrellas seleccionadas
     stars.forEach(s => {
       const sValue = parseInt(s.getAttribute('data-star'));
       if (sValue <= starValue) {
@@ -213,10 +212,10 @@ stars.forEach(star => {
       }
     });
 
-    // Actualizar la calificación mostrada
     calificacionSpan.textContent = starValue;
   });
 });
+
 
 
 
