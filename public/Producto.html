@@ -204,13 +204,14 @@ stars.forEach(star => {
     const starValue = parseInt(star.getAttribute('data-star'));
 
     stars.forEach(s => {
-      const sValue = parseInt(s.getAttribute('data-star'));
-      if (sValue <= starValue) {
-        s.classList.add('seleccionada');
-      } else {
-        s.classList.remove('seleccionada');
-      }
-    });
+  const sValue = parseInt(s.getAttribute('data-star'));
+  if (sValue >= starValue) { // Cambio en la condición aquí
+    s.classList.add('seleccionada');
+  } else {
+    s.classList.remove('seleccionada');
+  }
+});
+
 
     calificacionSpan.textContent = starValue;
   });
