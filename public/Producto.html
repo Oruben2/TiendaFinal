@@ -107,8 +107,8 @@
                         <span class="star" data-star="5">★</span>
                       </div>
                       
-                      <p>Calificación: 4 estrellas</p>
-            </div>
+                      <p>Calificación: <span id="calificacion">0</span> estrellas</p>
+                      
         </div>
     </div>
     
@@ -194,6 +194,31 @@
             document.getElementById("comentario").value = ""; // Limpia el campo de comentario
         }
     });
+
+    // Funcion de estrellas
+const stars = document.querySelectorAll('.star');
+const calificacionSpan = document.getElementById('calificacion');
+
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    const starValue = parseInt(star.getAttribute('data-star'));
+
+    // Resaltar las estrellas seleccionadas
+    stars.forEach(s => {
+      const sValue = parseInt(s.getAttribute('data-star'));
+      if (sValue <= starValue) {
+        s.classList.add('seleccionada');
+      } else {
+        s.classList.remove('seleccionada');
+      }
+    });
+
+    // Actualizar la calificación mostrada
+    calificacionSpan.textContent = starValue;
+  });
+});
+
+
 ///Funcion imprimir productos
     document.addEventListener("DOMContentLoaded", function() {
       // Obtener elementos del DOM
