@@ -1,11 +1,15 @@
 // Función para mostrar el producto en la wishlist al cargar la página
 function mostrarProductoEnWishlist() {
   // El primer producto de tu JSON
-  const primerProducto = {
-    "nombre": "Enfriador de CPU con RGB",
-    "precio": 1569,
-    "descripcion_corta": "Marca: COOLER MASTER Producto de alta calidad RGB"
-  };
+  fetch('productos.json')
+  .then(response => response.json())
+  .then(productos => {
+    // Aquí puedes trabajar con la lista de productos obtenidos
+    console.log(productos); // Por ejemplo, muestra los productos en la consola
+    // También puedes manipularlos, mostrarlos en la página, etc.
+  })
+  .catch(error => console.error('Error al obtener los datos:', error));
+
 
   // Creamos un elemento para mostrar la información del producto en la wishlist
   const productoHTML = `
