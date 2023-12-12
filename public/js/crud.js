@@ -1,17 +1,17 @@
 // Función para cargar y mostrar los productos
 function mostrarProductos(data) {
-  const cuerpoTabla = document.getElementById('res'); 
+  const cuerpoTabla = document.getElementById('res');
 
   // Iterar sobre los datos y agregar filas a la tabla
-  data.forEach(item => {
+  data.forEach(producto => {
     const fila = document.createElement('tr');
     fila.innerHTML = `
-      <td>${item.nombre}</td>
-      <td>${item.precio}</td>
-      <td>${item.descripcion_corta}</td>
-      <td>${item.descripcion_larga}</td>
+      <td>${producto.nombre}</td>
+      <td>${producto.precio}</td>
+      <td>${producto.descripcion_corta}</td>
+      <td>${producto.descripcion_larga}</td>
       <td>
-        <a href='#' class='btn btn-danger' onclick='eliminarProducto()'>Eliminar</a><br><br>
+        <a href='#' class='btn btn-danger btn-eliminar' onclick='eliminarProducto()'>Eliminar</a><br><br>
         <a href='#' class='btn btn-success' onclick='editarProducto()'>Editar</a>
       </td>
     `;
@@ -20,35 +20,55 @@ function mostrarProductos(data) {
 }
 
 // Función para cargar y mostrar los usuarios
-function mostrarUsuarios() {
-  fetch('usuarios.json')
-    .then(response => response.json())
-    .then(data => {
-      const cuerpoTabla = document.getElementById('cuerpoTabla');
+function mostrarUsuarios(data) {
+  const cuerpoTabla = document.getElementById('cuerpoTabla');
 
-      // Iterar sobre los datos y agregar filas a la tabla
-      data.forEach(usuario => {
-        const fila = document.createElement('tr');
-        fila.innerHTML = `
-          <td>${usuario.nombre}</td>
-          <td>${usuario.correo}</td>
-          <td>${usuario.contraseña}</td>
-          <td>${usuario.ciudad}</td>
-          <td>
-          <a href='#' class='btn btn-danger' onclick='eliminarProducto()'>Eliminar</a><br><br>
-          <a href='#' class='btn btn-success' onclick='editarProducto()'>Editar</a>
-        </td>
-        `;
-        cuerpoTabla.appendChild(fila);
-      });
-    })
-    .catch(error => {
-      console.error('Error al cargar los usuarios:', error);
-    });
+  // Iterar sobre los datos y agregar filas a la tabla
+  data.forEach(usuario => {
+    const fila = document.createElement('tr');
+    fila.innerHTML = `
+      <td>${usuario.nombre}</td>
+      <td>${usuario.correo}</td>
+      <td>${usuario.contraseña}</td>
+      <td>${usuario.ciudad}</td>
+      <td>
+        <a href='#' class='btn btn-danger btn-eliminar' onclick='eliminarUsuario()'>Eliminar</a><br><br>
+        <a href='#' class='btn btn-success' onclick='editarUsuario()'>Editar</a>
+      </td>
+    `;
+    cuerpoTabla.appendChild(fila);
+  });
+}
+
+// Función para eliminar producto
+function eliminarProducto() {
+  // Lógica para eliminar producto
+}
+
+// Función para editar producto
+function editarProducto() {
+  // Lógica para editar producto
+}
+
+// Función para eliminar usuario
+function eliminarUsuario() {
+  // Lógica para eliminar usuario
+}
+
+// Función para editar usuario
+function editarUsuario() {
+  // Lógica para editar usuario
 }
 
 // Llamar a las funciones para mostrar los usuarios y los productos al cargar la página
-mostrarUsuarios();
+fetch('usuarios.json')
+  .then(response => response.json())
+  .then(data => {
+    mostrarUsuarios(data);
+  })
+  .catch(error => {
+    console.error('Error al cargar los usuarios:', error);
+  });
 
 fetch('productos.json')
   .then(response => response.json())
@@ -59,22 +79,7 @@ fetch('productos.json')
     console.error('Error al cargar los productos:', error);
   });
 
-// Eliminar producto al hacer clic en el botón "Eliminar"
-$("#item").on("click", ".btn-eliminar", function() {
-  var index = $(this).closest("tr").data("index");
-  data.splice(index, 1);
-  actualizarTabla();
-});
-
 // Inicializar la tabla
-actualizarTabla();
-
-// Eliminar producto al hacer clic en el botón "Eliminar"
-$("#usuario").on("click", ".btn-eliminar", function() {
-  var index = $(this).closest("tr").data("index");
-  data.splice(index, 1);
-  actualizarTabla();
-});
-
-// Inicializar la tabla
-actualizarTabla();
+function actualizarTabla() {
+  // Lógica para actualizar la tabla después de eliminar un producto o usuario
+}
