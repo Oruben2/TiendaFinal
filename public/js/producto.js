@@ -12,18 +12,22 @@ function mostrarProductoEnWishlist() {
 
 
   // Creamos un elemento para mostrar la información del producto en la wishlist
+  const primerProducto = productos[0];
+
   const productoHTML = `
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">${primerProducto.nombre}</h5>
-          <p class="card-text">${primerProducto.descripcion_corta}</p>
-          <p class="card-text">Precio: $${primerProducto.precio}</p>
-        </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${primerProducto.nombre}</h5>
+        <p class="card-text">${primerProducto.descripcion_corta}</p>
+        <p class="card-text">Precio: $${primerProducto.precio}</p>
       </div>
     </div>
+  </div>
   `;
-
+  
+  console.log([productoHTML]);
+  
   // Agregamos el producto al contenedor de la wishlist
   document.getElementById('wishlist').innerHTML = productoHTML;
     // Agregamos el producto al contenedor de la wishlist
